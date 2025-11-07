@@ -9,9 +9,10 @@ def draw_square(size:int, filled=False, char="*")-> str:
 
     Returns:
         str: A string representation of the square.
-    """square='' 
+    """
+    square='' 
     for i in range(size) :
-        for j in range(size) 
+        for j in range(size) :
             if filled:
                 if j == 0 or j == size-1:
                     square+=char
@@ -19,7 +20,7 @@ def draw_square(size:int, filled=False, char="*")-> str:
                     square +=char 
             else:
                 square +=(char) 
-            square +='\n'
+        square +='\n'
     return sqaure
 def draw_number_triangle(height:int)->str:
     """
@@ -55,8 +56,8 @@ def factorial(n:int):
     return: n!
     """
     if n == 0 or n == 1:
-        retun 1
-    return n * f(n-1)
+        return 1
+    return n * factorial(n-1)
     
 def bar_graph()->str:
     """
@@ -111,7 +112,13 @@ def pascals_triangle(rows:int)->list[int]:
         returns [1, 5, 10, 10, 5, 1]
         using 'p(n, k) = n! / (k! * (n-k)!)'
     """
-    pass
+    pascal =[] 
+    for i in range(rows) :
+        triangle=[] 
+        for j in range(i+1):
+            triangle.append(int(factorial(i)/(factorial(j) *factorial(i-j))))
+        Pascal.append(triangle)
+    return pascal
 
 
     
