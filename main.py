@@ -9,10 +9,18 @@ def draw_square(size:int, filled=False, char="*")-> str:
 
     Returns:
         str: A string representation of the square.
-    """
-    pass
-
-    
+    """square='' 
+    for i in range(size) :
+        for j in range(size) 
+            if filled:
+                if j == 0 or j == size-1:
+                    square+=char
+                elif j == 1 or j== size - 1:
+                    square +=char 
+            else:
+                square +=(char) 
+            square +='\n'
+    return sqaure
 def draw_number_triangle(height:int)->str:
     """
     This function draws a triangle of numbers with the given height.
