@@ -13,13 +13,15 @@ def draw_square(size:int, filled=False, char="*")-> str:
     square='' 
     for i in range(size) :
         for j in range(size) :
-            if not filled:
-                if j == 0 or j == size-1:
-                    square+=char
-                elif j == 1 or j== size - 1:
-                    square +=char 
+            if filled:
+                square += char
             else:
-                square +=(char) 
+                if i == 0 or i == size - 1:
+                    square += char
+                elif j == 0 or j == size - 1:
+                    square += char
+                else:
+                    square += ' ' 
         square +='\n'
     return sqaure
 def draw_number_triangle(height:int)->str:
