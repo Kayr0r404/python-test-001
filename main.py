@@ -37,7 +37,13 @@ def draw_number_triangle(height:int)->str:
     Returns:
         string : A string representation of the number triangle.
     """
-    pass
+    triangle ='' 
+    for i in range(height) :
+        for j in range(1,i+1) :
+            triangle += str(j)
+        triangle +='\n' 
+    return triangle 
+        
 
 def factorial(n:int):
     """
@@ -48,7 +54,9 @@ def factorial(n:int):
     n: non-negative integer
     return: n!
     """
-    pass
+    if n == 0 or n == 1:
+        retun 1
+    return n * f(n-1)
     
 def bar_graph()->str:
     """
@@ -71,7 +79,14 @@ def bar_graph()->str:
     returns:
         str: string of the graph
     """
-    pass
+    bar ='' 
+    with open('grades.txt','r') as f:
+        for idx, line in enumerate(f, 1):
+            grades = line.split(',')
+            grades = [int(i.strip()) for i in grades] 
+            avg = sum(grades) /len(grades) 
+            bar +=f"{idx}: {'*' *avg}\n"
+        return bar
 
 
 def pascals_triangle(rows:int)->list[int]:
