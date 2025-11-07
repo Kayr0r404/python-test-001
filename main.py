@@ -13,7 +13,7 @@ def draw_square(size:int, filled=False, char="*")-> str:
     square='' 
     for i in range(size) :
         for j in range(size) :
-            if filled:
+            if not filled:
                 if j == 0 or j == size-1:
                     square+=char
                 elif j == 1 or j== size - 1:
