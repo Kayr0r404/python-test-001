@@ -120,7 +120,7 @@ def pascals_triangle(rows:int)->list[int]:
         for j in range(i+1):
             triangle.append(int(factorial(i)/(factorial(j) *factorial(i-j))))
         Pascal.append(triangle)
-    return pascal
+    return pascal[rows+1]
 
 
     
